@@ -75,7 +75,7 @@ export default {
   },
   "class-name": {
     color: "#FF9800",
-    textDecoration: "underline",
+    textDecoration: "none",
   },
   boolean: {
     color: "#9FA8DA",

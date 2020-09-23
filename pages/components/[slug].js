@@ -33,7 +33,7 @@ export const getStaticPaths = async () => {
   const {
     data,
   } = await axios.get(
-    `https://best-markdown-editor-be.herokuapp.com/api/published-files/folder-name/Sriracha Docs`,
+    `https://best-markdown-editor-be.herokuapp.com/api/published-files/folder-name/Sriracha Components`,
     { headers }
   );
 
@@ -59,7 +59,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     `https://best-markdown-editor-be.herokuapp.com/api/published-file-by-slug/${slug}`,
     { headers }
   );
-  // console.log("data:", data);
+  console.log("data:", data);
   return {
     props: {
       htmlString: data.body,

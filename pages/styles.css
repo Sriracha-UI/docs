@@ -1,12 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Rancho|Open+Sans&display=swap");
-
-.app {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-height: 100%;
-}
+@import url("https://fonts.googleapis.com/css?family=Bellota|Ubuntu+Mono|Open+Sans|Ubuntu|Raleway|Space+Mono&display=swap");
 
 .nav-cabinet-menu {
   display: none;

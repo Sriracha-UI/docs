@@ -11,9 +11,11 @@ To install Sriracha UI to your project simply run `yarn add sriracha-ui` || `npm
 
 ### CSS overhaul and AppWrapper
 
-Sriracha UI comes with a css file you can import that includes a nice subtle style overhaul and a normalize. Just add `import "sriracha-ui/css/main.css";` to the top of your src/index.js! If you're using Next.js, be sure to add it too the `_app.js` file in your pages directory.
+Sriracha UI comes with it's own css overhaul component you can import, that includes a nice subtle style overhaul and a normalize. Just import `GlobalStyles` at the top of your src/index.js! If you're using Next.js, be sure to add it too the `_app.js` file in your pages directory.
 
 AppWrapper is a powerful component that lets you set the background and fonts of your application.
+
+<Button red sink>Click me!</Button>
 
 **React Example:**
 
@@ -54,9 +56,7 @@ If you want to hook up Sriracha in a Next.js app, try adding this to your `_app.
 // pages/_app.js
 
 import App from "next/app";
-import { AppWrapper, theme } from "sriracha-ui";
-import "./styles.css";
-import "sriracha-ui/css/main.css";
+import { AppWrapper, GlobalStyles } from "sriracha-ui";
 
 class MyApp extends App {
   render() {
@@ -68,6 +68,7 @@ class MyApp extends App {
         headFont={/* font-family goes here */}
         font={/* font-family goes here */}
       >
+        <GlobalStyles />
         <Component {...pageProps} />
       </AppWrapper>
     );
@@ -77,18 +78,6 @@ class MyApp extends App {
 export default MyApp;
 ```
 
-### Don't forget about that pesky server side css
+### Learn more
 
-> Next.js adds some server side styling. In order to get around that, my current solution is to add a class name of "app" to my AppWrapper and create and import a styles.css file with the following contents.
-
-```css
-/* pages/styles.css */
-
-.app {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  min-height: 100%;
-}
-```
+Go to

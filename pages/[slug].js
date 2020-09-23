@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 // import fs from "fs";
 import axios from "axios";
 import { Card, Button } from "sriracha-ui";
-import HighlightedMarkdown from "../../components/HighlightedMarkdown";
+import { HighlightedMarkdown } from "../components/Highlighted";
 // import { axiosWithAuth } from "../utils/axiosWithAuth";
 
-export default function DocsSlug({ htmlString }) {
+export default function Test({ htmlString }) {
   // console.log("data", data);
   return (
     <Layout>
@@ -59,7 +59,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     `https://best-markdown-editor-be.herokuapp.com/api/published-file-by-slug/${slug}`,
     { headers }
   );
-  // console.log("data:", data);
+  console.log("data:", data);
   return {
     props: {
       htmlString: data.body,
